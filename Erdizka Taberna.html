@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Erdizka Taberna | Vitoria-Gasteiz</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#F5EFE6;
+color:#2B1D17;
+line-height:1.6;
+}
+
+h1,h2,h3{
+font-family:'Cormorant Garamond',serif;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(43,29,23,.95);
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+backdrop-filter:blur(10px);
+}
+
+.logo{
+color:white;
+font-size:32px;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{
+color:#C8A96B;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/4e/17/60/erdizka-taberna.jpg?w=900&h=500&s=1');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:90px;
+color:white;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:24px;
+color:#eee;
+max-width:800px;
+margin:auto;
+margin-bottom:40px;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:15px 35px;
+border:none;
+cursor:pointer;
+font-size:16px;
+border-radius:50px;
+transition:.3s;
+}
+
+.btn-primary{
+background:#6E1F1F;
+color:white;
+}
+
+.btn-primary:hover{
+background:#531616;
+}
+
+.btn-secondary{
+border:2px solid #C8A96B;
+background:transparent;
+color:#C8A96B;
+}
+
+.btn-secondary:hover{
+background:#C8A96B;
+color:#2B1D17;
+}
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+font-size:55px;
+margin-bottom:20px;
+text-align:center;
+}
+
+.subtitle{
+text-align:center;
+color:#C8A96B;
+letter-spacing:3px;
+margin-bottom:10px;
+text-transform:uppercase;
+}
+
+.historia{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.historia img{
+width:100%;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
+
+.especialidades{
+background:white;
+}
+
+.menu-btn-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.menu-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #b22222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.menu-btn:hover {
+    background: #8b1a1a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.galeria-grid{
+columns:3;
+column-gap:15px;
+}
+
+.galeria-grid img{
+width:100%;
+margin-bottom:15px;
+border-radius:15px;
+transition:.4s;
+}
+
+.galeria-grid img:hover{
+transform:scale(1.03);
+}
+
+.experiencia{
+background:#2B1D17;
+color:white;
+text-align:center;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:60px;
+}
+
+.stat{
+border:1px solid rgba(200,169,107,.4);
+padding:35px;
+border-radius:20px;
+}
+
+.stat h3{
+font-size:45px;
+color:#C8A96B;
+}
+
+.contacto-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+}
+
+.contacto-info p{
+margin-bottom:15px;
+font-size:18px;
+}
+
+iframe{
+width:100%;
+height:450px;
+border:none;
+border-radius:20px;
+}
+
+footer{
+background:#2B1D17;
+color:white;
+padding:50px;
+text-align:center;
+}
+
+footer h2{
+font-size:40px;
+margin-bottom:15px;
+}
+
+footer a{
+color:#C8A96B;
+text-decoration:none;
+margin:0 10px;
+}
+
+@media(max-width:900px){
+
+.hero-content h1{
+font-size:60px;
+}
+
+.historia,
+.contacto-grid{
+grid-template-columns:1fr;
+}
+
+.galeria-grid{
+columns:1;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">ERDIZKA TABERNA</div>
+
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#historia">Historia</a></li>
+<li><a href="#especialidades">Especialidades</a></li>
+<li><a href="#galeria">Galería</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+</nav>
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<h1>Erdizka Taberna</h1>
+
+<p>
+Cocina vasca tradicional con un toque actual en el corazón del Casco Medieval de Vitoria-Gasteiz.
+</p>
+
+<div class="buttons">
+    <a href="tel:+34123456789" class="btn btn-primary">
+        Reservar mesa
+    </a>
+
+    <a href="C:\Users\OierUgaldeGonzálezde\Downloads\Carta Completa.pdf" target="_blank" class="btn btn-secondary">
+        Ver carta
+    </a>
+</div>
+
+</section>
+
+<section id="historia">
+
+<p class="subtitle">Nuestra historia</p>
+
+<h2 class="section-title">
+Tradición, sabor y cercanía
+</h2>
+
+<div class="historia">
+
+<div>
+
+<p>
+Ubicada en una de las calles más emblemáticas del Casco Medieval de
+Vitoria-Gasteiz, Erdizka Taberna ofrece una experiencia gastronómica basada en el producto de calidad, la cocina tradicional vasca y un ambiente acogedor donde disfrutar de cada comida con calma.
+</p>
+
+</div>
+
+<img src="C:\Users\OierUgaldeGonzálezde\Downloads\ChatGPT Image 18 jun 2026, 11_41_42.png">
+
+</div>
+
+</section>
+
+<section class="especialidades" id="especialidades">
+
+    <p class="subtitle">Especialidades</p>
+
+    <h2 class="section-title">Nuestra Cocina</h2>
+
+
+    <div class="menu-btn-container">
+        <a href="C:\Users\OierUgaldeGonzálezde\Downloads\Carta Completa.pdf" target="_blank" class="menu-btn">
+            Ver Carta Completa
+        </a>
+    </div>
+
+</section>
+
+<section id="galeria">
+
+<p class="subtitle">Galería</p>
+
+<h2 class="section-title">Nuestro Ambiente</h2>
+
+<div class="galeria-grid">
+
+<img src="C:\Users\OierUgaldeGonzálezde\Downloads\ChatGPT Image 18 jun 2026, 10_23_43.png">
+
+<img src="C:\Users\OierUgaldeGonzálezde\Downloads\ChatGPT Image 18 jun 2026, 11_45_15.png">
+
+<img src="C:\Users\OierUgaldeGonzálezde\Downloads\ChatGPT Image 18 jun 2026, 11_47_12.png">
+
+<img src="C:\Users\OierUgaldeGonzálezde\Downloads\ChatGPT Image 18 jun 2026, 18_13_52.png">
+
+<img src="C:\Users\OierUgaldeGonzálezde\Pictures\Screenshots\Captura de pantalla 2026-06-18 175442.png">
+
+<img src="C:\Users\OierUgaldeGonzálezde\Downloads\ChatGPT Image Jun 19, 2026, 09_44_52 AM.png">
+
+<img src="C:\Users\OierUgaldeGonzálezde\Pictures\Screenshots\Captura de pantalla 2026-06-18 180304.png">
+
+<img src="C:\Users\OierUgaldeGonzálezde\Pictures\Screenshots\Captura de pantalla 2026-06-18 175409.png">
+
+</div>
+
+</section>
+
+<section class="experiencia">
+
+<p class="subtitle">Experiencia gastronómica</p>
+
+<h2 class="section-title">
+Más que una comida
+</h2>
+
+<p>
+Cada detalle está pensado para que nuestros clientes disfruten de la auténtica hospitalidad vasca en un entorno único del casco histórico de Vitoria.
+</p>
+
+<div class="stats">
+
+<div class="stat">
+<h3>100%</h3>
+<p>Producto local</p>
+</div>
+
+<div class="stat">
+<h3>100%</h3>
+<p>Cocina tradicional</p>
+</div>
+
+<div class="stat">
+<h3>100%</h3>
+<p>Ambiente acogedor</p>
+</div>
+
+<div class="stat">
+<h3>100%</h3>
+<p>Atención cercana</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contacto">
+
+<p class="subtitle">Contacto</p>
+
+<h2 class="section-title">
+Información y reservas
+</h2>
+
+<div class="contacto-grid">
+
+<div class="contacto-info">
+
+<p><strong>Dirección:</strong><br>
+Calle Cuchillería 11<br>
+01001 Vitoria-Gasteiz</p>
+
+<p><strong>Teléfono:</strong><br>
+945 28 34 18</p>
+
+<p><strong>Email:</strong><br>
+erdizkaanboto@gmail.com</p>
+
+<p><strong>Horario:</strong></p>
+
+<p>
+Lunes a miércoles: 11:30 - 17:00
+</p>
+
+<p>
+Jueves: 11:30 - 01:30
+</p>
+
+<p>
+Viernes y sábado: 11:30 - 02:30
+</p>
+
+<p>
+Domingo: 11:00 - 17:00
+</p>
+
+</div>
+
+<div>
+
+<iframe src="https://maps.google.com/maps?q=Calle%20Cuchilleria%2011%20Vitoria-Gasteiz&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>ERDIZKA TABERNA</h2>
+
+<p>
+Tradición · Gastronomía · Casco Medieval de Vitoria-Gasteiz
+</p>
+
+<br>
+
+<a href="#inicio">Inicio</a>
+<a href="#historia">Historia</a>
+<a href="#especialidades">Especialidades</a>
+<a href="#galeria">Galería</a>
+<a href="#contacto">Contacto</a>
+
+</footer>
+
+</body>
+</html>
